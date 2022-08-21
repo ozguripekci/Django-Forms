@@ -8,9 +8,11 @@
     <input type="submit", value="OK">
 </form> {% endcomment %}
 
-
+{% load crispy_forms_tags %}
 <form action="" method="POST" enctype="multipart/form-data">
-    {{ form.as_p }}
+    {% csrf_token %}
+    {% comment %} {{ form.as_p}} {% endcomment %}
+    {{ form | crispy }}
     <input type="submit", value="OK">
 
 </form>
