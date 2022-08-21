@@ -1,0 +1,18 @@
+{% extends "student/base.html" %}
+
+{% block container %}
+
+{% comment %} <form action="">
+    <label for="">Student Name</label>
+    <input type="text">
+    <input type="submit", value="OK">
+</form> {% endcomment %}
+
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {{ form.as_p }}
+    <input type="submit", value="OK">
+
+</form>
+
+{% endblock container %}
